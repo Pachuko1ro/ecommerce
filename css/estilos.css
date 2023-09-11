@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap');
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+header{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2,100px);
+    grid-template-areas: 
+    "a a . b b b . ."
+    "c c c c c c c c"
+;
+    
+}
+
+header div img{
+    border: 1px solid blue;
+    max-height: 50px;
+    min-width: 100px;
+    grid-area: a;
+}
+#barra-busqueda{
+    display: inline;
+    grid-area: b;
+}
+nav{
+
+    grid-area: c;
+}
