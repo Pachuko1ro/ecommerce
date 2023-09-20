@@ -5,16 +5,17 @@
 }
 body{
     font-family: 'Urbanist', sans-serif;
+    min-width: 700px;
 }
 
 header {
-   
     width: 100%;
     height: auto;
 }
 
 
 /* -------arriba------------ */
+
 header > div {
     background: white;
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url('../img/fondo.png');
@@ -24,59 +25,67 @@ header > div {
     height: 54px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
-#logo {
+
+/* header div a {
     height: 54px;
-    width:auto;
+    width:200px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-#logo img {
-   
+header div a img {
+    height: 54px;
+    width:200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    max-height: 40px;
 }
 
 #barra-busqueda {
-    width:70%;
+    
     height: 54px;
     text-align: center;
     line-height: 54px;
     
+    width:60%;
 }
 #barra-busqueda form input {
-    border: 1px solid magenta;
-    border-radius:15px 0 0 15px;
+    border: 2px solid #DE2286;
+    border-radius:20px 0 0 20px;
     outline: none;
-    padding: 2px;
     padding-left: 10px;
-    height: 35px;
-    width: 50%;
+    height: 40px;
+    width: 70%;
+    border-right: none;
+    font-size: 18px;
+    /* line-height: 40px; */
+    
 }
 
-#barra-busqueda form input[type="submit"] {
-    padding: 2px;
-    height: 35px;
-    width: 35px;
-    border-radius: 0 50% 50% 0;
+#barra-busqueda form button {
+    border: 2px solid #DE2286;
+    border-radius: 0 20px 20px 0;
+    height: 40px;
+    width: 40px;
     border-left: none;
+    background-color: #fff;
+    font-size: 18px;
+    /* line-height: 40px; */
 }
-/* 
-#boton-carrito {
-    width: 5%;
-    height: 54px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
- */
+ #barra-busqueda form button img{
+    width: 15px;
+    
+    
+}
 
 #redes-sociales {
-   /*  border: 1px solid cyan; */
-    width: auto;
+    width: 180px;
     height: 54px;
     display: flex;
     justify-content: center;
@@ -87,42 +96,34 @@ header > div {
 #redes-sociales img {
     width: 35px;
     height: 35px;
-    /* border: 1px solid black; */
     padding: 1px;
-   
 }
 #boton-carrito img{
     border-radius: 50%;
     width: 35px;
     display: block;
-    border: 1px solid magenta;
+    border: 2px solid #DE2286;
     padding: 4px;
     background-color: white;
-    
 }
 /* ----header abajo---- */
 
 header nav {
     box-shadow: 0 1px 1px 0 #828282;
     width: 100%;
-    /* background-color: #48D1CC; */
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
     align-items: center;
 }
 
 header nav ul {
+    background-color: #fff;
+    border-radius: 27px;
     /* border: 1px solid blue; */
     list-style: none;
     padding: 0;
     width: 70%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-header nav div {
-    /* border: 1px solid blue; */
-    width: 15%;
+    height: 54px;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -132,16 +133,31 @@ header nav div {
 header nav ul li a {
    text-decoration: none; 
    /* border: 1px solid blueviolet; */
-   width: 115px;
+   width: 100px;
    height: 40px;
    display: block;
    background-color: #ffffff;
-   color: black;
+   color: rgb(33, 33, 33);
    font-weight: 400;
    font-size: 1.2rem;
    text-align: center;
    line-height: 40px;
 }
+
+header nav ul li a::after {
+    content: '';
+    display: block;
+    background: #DE2286;
+    width: 0;
+    height: 3px;
+    transition: all 350ms;
+}
+ 
+header nav ul li a:hover::after {
+    width: 100%;
+    
+}
+
 
 main {
     height: 500px;
