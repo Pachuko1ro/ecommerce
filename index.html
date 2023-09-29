@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce Reino</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/inicio-flex.css">
 
 </head>
 <body>
     <header>
         <div>
-            <a href="./index.html"><img src="img/logo.png" alt="logo"></a> 
+            <a id="logo" href="./index.html"><img src="img/logo.png" alt="logo"></a> 
             <div id="barra-busqueda">
                 <form action="#">
-                    <input type="text" placeholder="Buscar productos ..."><button type="submit"alt="Buscar">🔎</button>
+                    <div>
+                    <input type="text" placeholder="Buscar productos ...">
+                    <button type="submit"alt="Buscar"></button>
+                    </div>
+                </form>    
             </div>
             <div id="redes-sociales">
                 <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo-whatsapp-256.png" alt="logo de whatsapp"></a>
@@ -37,7 +42,25 @@
            <div></div>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <div class="section-cards">
+        <div class="section-cards-header">
+            <h1>La variedad más grande del país.</h1>
+        </div>    
+
+        <div class="cards-container"></div>    
+
+    </div>
+    
+</main>
+
+<footer>
+    <h3>Copyright 2023</h3>
+</footer>
+
+<script src="js/productos.js"></script>
+<script src="js/inicio.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

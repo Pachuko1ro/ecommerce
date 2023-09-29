@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce Reino</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/alta.css">
 </head>
 <body>
     <header>
         <div>
-            <a href="./index.html"><img src="img/logo.png" alt="logo"></a> 
+            <a id="logo" href="./index.html"><img src="img/logo.png" alt="logo"></a> 
             <div id="barra-busqueda">
                 <form action="#">
-                    <input type="text" placeholder="Buscar productos ..."><button type="submit"alt="Buscar">🔎</button>
+                    <div>
+                    <input type="text" placeholder="Buscar productos ...">
+                    <button type="submit"alt="Buscar"></button>
+                    </div>
+                </form>    
             </div>
             <div id="redes-sociales">
                 <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo-whatsapp-256.png" alt="logo de whatsapp"></a>
@@ -36,7 +41,81 @@
            <div></div>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <h1>Alta de productos</h1>
+
+        <form onsubmit="agregar(event)" class="alta-form">
+            <div class="input-group">
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" id="nombre" require maxlength="30">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="precio">precio</label>
+                <input type="number" step="0.00" name="precio" id="precio" required>
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="stock">stock</label>
+                <input type="number" name="stock" id="stock" required>
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="marca">marca</label>
+                <input type="text" name="marca" id="marca" required maxlength="20">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="categoria">categoria</label>
+                <input type="text" name="categoria" id="categoria" required maxlength="15">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="detalles">detalles</label>
+                <input type="text" name="detalles" id="detalles" required maxlength="20">
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="foto">foto</label>
+                <input type="text" name="foto" id="foto" >
+                <div class="error-detail"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="checkbox" name="envio" id="envio" >
+                <label for="envio">envío sin cargo</label>
+                <div class="error-detail"></div>
+            </div>
+
+            <!-- <button onclick="agregar(event)">Agregar</button> -->
+            <button>Agregar</button>
+
+        </form>
+
+
+        <hr>
+
+        <h2>Lista de productos disponibles</h2>
+
+        <table></table>
+
+
+    </main>
+
+    <footer>
+        <h3>Copyright 2023</h3>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/alta.js"></script>
+    <script src="js/main.js"></script>
+
+
 </body>
 </html>
