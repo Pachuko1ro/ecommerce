@@ -7,14 +7,26 @@ body{
     font-family: 'Urbanist', sans-serif;
     background-color: #F1F1F1;
 
-    min-width: 700px;
+    min-width: 318px;
 }
 
 header {
     width: 100%;
     height: auto;
 }
-
+main h1{
+    height: 80px;
+    margin: 0;
+    margin-top: 3px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url('../img/fondo.png');
+    background-repeat: repeat;
+    background-size: 500px;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 3rem;
+    color: rgb(60, 60, 60);
+}
 
 /* -------arriba------------ */
 
@@ -26,35 +38,33 @@ header > div {
     width: 100%;
     height: 54px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around ;
     align-items: center;
 }
 #logo {
     height: 54px;
-    width: 20%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+#logo img{
+    height: 45px;
+}
 header div a img {
-    height: 54px;
+    height: 40px;
     width:200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 40px;
+   
 }
 
 #barra-busqueda {
     height: 54px;
-    width:60%;
+    width:55%;
 }
 
 #barra-busqueda form div{
     height: 54px;
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,9 +93,16 @@ header div a img {
     background-size: contain;
     background-repeat: no-repeat;
 }
-
+#boton-carrito img{
+    border-radius: 50%;
+    width: 35px;
+    display: block;
+    border: 2px solid #DE2286;
+    padding: 4px;
+    background-color: white;
+}
 #redes-sociales {
-    width: 20%;
+    width: 15%;
     height: 54px;
     display: flex;
     justify-content: center;
@@ -98,14 +115,7 @@ header div a img {
     padding: 1px;
 }
 
-#boton-carrito img{
-    border-radius: 50%;
-    width: 35px;
-    display: block;
-    border: 2px solid #DE2286;
-    padding: 4px;
-    background-color: white;
-}
+
 /* ----header abajo---- */
 
 header nav {
@@ -120,7 +130,6 @@ header nav {
 
 header nav ul {
     background-color: #fff;
-    border-radius: 27px;    
     list-style: none;
     padding: 0;
     width: 70%;
@@ -142,6 +151,10 @@ header nav ul li a {
    text-align: center;
    line-height: 28px;
 }
+header nav ul li a:focus{
+   background-color: #DE2286;
+   color: white;
+ }
 
 header nav ul li a::after {
     content: '';
@@ -169,3 +182,115 @@ footer {
     line-height: 100px;
     font-size: 22px;
 }
+
+
+@media(max-width:992px) {
+
+    /* min-... -> desde ... px */
+               
+    }
+    
+@media(max-width:768px) {
+    main h1{
+        height: 60px;
+        line-height: 60px;
+        font-size: 2rem;
+    }
+    #logo{
+        width: 30%;
+    }
+    #logo img{
+        height: 40px;
+    }
+    header div a {
+        display: none; 
+    }
+    
+    #redes-sociale{
+        width: auto;
+    }
+    #boton-carrito{
+        display: block;
+    }
+
+    #barra-busqueda {
+        height: 54px;
+        width:60%;
+    }
+}
+
+    
+    
+@media(max-width:512px) {
+    main h1{
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.5rem;
+    }
+    #logo img{
+        height: 30px;
+    }
+
+    #redes-sociale{
+        width: 10%;
+    }
+    header div a{
+        display: none;
+        width: 0%;
+    }
+    header > div {
+        height: 40px;
+        /* display: flex;
+        justify-content: space-around ;
+        align-items: center; */
+    }
+    #barra-busqueda form input {
+        border: 1px solid #DE2286;
+        border-radius:15px 0 0 15px;
+        height: 25px;
+        width: 80%; 
+        border-right: none;
+        font-size: 0.9rem;
+    }
+    
+    #barra-busqueda form button {
+        border: 1px solid #DE2286;
+        border-radius: 0 15px 15px 0;
+        height: 25px;
+        width: 25px;
+        border-left: none;
+        
+    }
+
+
+    #boton-carrito img{
+        border: 1px solid #DE2286;
+        height: 25px;
+        width: 25px;
+        display: block;
+    }
+    header nav ul li a {
+        font-size: 1rem;
+        width: 75px;
+    }
+    #barra-busqueda {
+        height: 54px;
+        width:50%;
+    }
+}
+
+
+@media(max-width:380px) {
+    main h1{
+       font-size: 1.2rem;
+    }
+    #logo img{
+        height: 20px;
+    }
+    header nav ul li a {
+        font-size: 0.8rem;
+        width: 54px;
+    }
+
+}
+

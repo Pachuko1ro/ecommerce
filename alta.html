@@ -32,10 +32,9 @@
             <ul>
                 <li> <a href="./index.html">Inicio</a> </li>
                 <li> <a href="./alta.html">Alta</a> </li>
-                <li> <a href="./productos.html">Productos</a> </li>
                 <li> <a href="./contacto.html">Contacto</a> </li>
-                <li> <a href="./nosotros.html">Nosotros</a> </li>
                 <li> <a href="./otra.html">Otra</a> </li>
+                <li> <a href="./nosotros.html">Nosotros</a> </li>
                 <li> <a href="./carrito.html">Carrito</a> </li>
             </ul>
            <div></div>
@@ -47,13 +46,13 @@
         <form onsubmit="agregar(event)" class="alta-form">
             <div class="input-group">
                 <label for="nombre">nombre</label>
-                <input type="text" name="nombre" id="nombre" require maxlength="30">
+                <input type="text" name="nombre" id="nombre" required maxlength="30">
                 <div class="error-detail"></div>
             </div>
 
             <div class="input-group">
                 <label for="precio">precio</label>
-                <input type="number" step="0.00" name="precio" id="precio" required>
+                <input type="number" step="0.01" name="precio" id="precio" required>
                 <div class="error-detail"></div>
             </div>
 
@@ -78,6 +77,19 @@
             <div class="input-group">
                 <label for="detalles">detalles</label>
                 <input type="text" name="detalles" id="detalles" required maxlength="20">
+                <div class="error-detail"></div>
+            </div>
+            
+            <h4>Establezca rango de edad adecuado para el producto</h4>
+         
+            <div id="edad"  style="color: rgb(85, 85, 85);">
+                <label>Mínima<input for="edad" type="number" id="min" required min="0" max="120"></label>
+                <label>Máxima<input for="edad" type="number" id="max" required min="0" max="120"></label>
+                
+            </div>
+            <div class="input-group">
+                <label for="descripcion">descripción larga</label>
+                <input type="text" name="descripcion" id="descripcion" required minlength="15" maxlength="50">
                 <div class="error-detail"></div>
             </div>
 

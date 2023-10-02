@@ -1,0 +1,159 @@
+main{
+    height: auto;
+}
+
+main form{
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+main label {
+    text-transform: capitalize;
+    display: block;
+    margin: auto;
+}
+
+main input {
+    display: block;
+    margin: auto;
+    width: 100%;
+
+
+}
+main form div{
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+}
+#edad{
+    /* border: 1px solid blue; */
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.text{
+    text-align: center;
+    width:100%;
+
+}
+main input, textarea, select {
+    margin-bottom: 20px;
+    
+}
+textarea{
+    
+    width: 80%;
+    height: 140px;
+}
+
+main input[type="radio"],
+label[for^="g"],
+input[type="checkbox"],
+label.estudios{
+    display: inline;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+hr{
+    border: 1px solid #DE2286;
+    width: 100%;
+}
+.contenedor {
+    border: 1px solid#DE2286;
+    border-radius: 5px;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+main h3{
+    margin-top: 10px;
+}
+h2 {
+    margin-bottom: 10px;
+}
+p{
+    width: 100%;
+    padding: 10px;
+}
+
+#btn{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#btn button{
+    background-color: #DE2286;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+    height: 40px;
+    box-shadow: none;
+}
+/*--------------------------*/
+main input{
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 28px;
+    width: 75%;
+    border:none;
+    outline: none;
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.5);
+}
+main input:invalid:focus {
+    box-shadow: 3px 2px 5px #DE2286;
+}
+
+main input:valid{
+    box-shadow: 3px 2px 5px green, -3px -2px 5px green;
+}
+main input[type="checkbox"]:valid{
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.5);
+}
+main input[type="radio"]:valid{
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.5);
+}
+
+main input[type="number"]:invalid:focus {
+    box-shadow: 3px 2px 5px #DE2286;
+}
+
+main input[type="email"]:invalid:focus {
+    box-shadow: 3px 2px 5px #DE2286;
+}
+/*--------------------------*/
+
+
+@media(max-width:992px) {
+
+  
+}
+    
+@media(max-width:768px) {
+        
+}
+    
+    
+@media(max-width:512px) {
+    main form div{
+        width: 100%;
+        padding: 5px;
+    }
+        
+}
+    
+@media(max-width:380px) {
+    main form div{
+        width: 100%;
+        padding: 5px;
+    }
+}

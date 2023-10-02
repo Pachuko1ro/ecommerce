@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce Reino</title>
     <link rel="stylesheet" href="css/estilos.css">
-
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
     <header>
@@ -32,10 +32,9 @@
             <ul>
                 <li> <a href="./index.html">Inicio</a> </li>
                 <li> <a href="./alta.html">Alta</a> </li>
-                <li> <a href="./productos.html">Productos</a> </li>
                 <li> <a href="./contacto.html">Contacto</a> </li>
-                <li> <a href="./nosotros.html">Nosotros</a> </li>
                 <li> <a href="./otra.html">Otra</a> </li>
+                <li> <a href="./nosotros.html">Nosotros</a> </li>
                 <li> <a href="./carrito.html">Carrito</a> </li>
             </ul>
            <div></div>
@@ -43,6 +42,60 @@
     </header>
     <main>
         <h1>Contacto</h1>
+        <div class="contenedor">
+
+            <h2>Complete sus datos</h2>
+    
+            <form action="https://postman-echo.com/post" method="post">
+                
+                <div>
+                    <label for="nombre">nombre</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Ingrese su nombre" required minlength="3" maxlength="10"
+                >
+                </div>
+                <div>
+                    <label>apellido</label>
+                    <input type="text" name="apellido" required>
+                </div id="edad">   
+                <div>
+                    <label for="edad">edad</label>
+                    <input id="edad" type="number" name="edad" required min="18" max="80">
+                </div>    
+                <div>
+                    <label for="email">email</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+                <div>
+                    <label>Género</label>
+                    <input id="g1" type="radio" name="genero" value="femenino"> <label for="g1">Femenino</label>
+                    <input id="g2" type="radio" name="genero" value="masculino"> <label for="g2">Masculino</label>
+                    <input id="g3" type="radio" name="genero" value="otros"> <label for="g3">Otros</label>
+                </div>
+                <div>
+                    <label>Estudios</label>
+                    <label class="estudios"><input type="checkbox" name="primaria" value="Si" checked> Primaria</label>
+                    <label class="estudios"><input type="checkbox" name="secundaria" value="Si"> Secundaria</label>
+                    <label class="estudios"><input type="checkbox" name="terciaria" value="Si"> Terciaria</label>
+                    <label class="estudios"><input type="checkbox" name="cursos" value="Si"> Cursos</label>
+                </div>
+                <div class="text">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea name="comentarios" id="comentarios" cols="" rows=""></textarea>
+                </div>
+               
+               <hr>
+                <h3>Condiciones</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam debitis doloremque quibusdam voluptatem illo rerum quaerat esse ducimus obcaecati facere assumenda quae quis sequi reiciendis in, voluptate deleniti dignissimos rem?
+                </p>
+                <div>
+                <label><input type="checkbox" name="condiciones" value="acepto"><u><b> ¿Acepta las condiciones del sitio?</b></u></label>
+                </div>
+                <div id="btn">
+                <button>ENVIAR INFORMACIÓN</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>

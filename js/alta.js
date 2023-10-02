@@ -16,7 +16,10 @@ function agregar(e) {
     var refMarca = document.getElementById('marca')
     var refCategoria = document.getElementById('categoria')
     var refDetalles = document.getElementById('detalles')
+    var refDescripcion = document.getElementById('descripcion')
     var refFoto = document.getElementById('foto')
+    var refEdadMin = document.getElementById('min')
+    var refEdadMax = document.getElementById('max')
     var refEnvio = document.getElementById('envio')
 
     var nombre = refNombre.value
@@ -25,8 +28,15 @@ function agregar(e) {
     var marca = refMarca.value
     var categoria = refCategoria.value
     var detalles = refDetalles.value
+    var descripcion =refDescripcion.value
     var foto = refFoto.value
+    var edadMin = refEdadMin.value
+    var edadMax = refEdadMax.value
     var envio = refEnvio.checked
+    
+
+
+
 
     //console.log(nombre, precio, stock, envio)
     productos.push({
@@ -36,7 +46,10 @@ function agregar(e) {
         marca : marca,
         categoria : categoria,
         detalles : detalles,
+        descripcion : descripcion,
         foto : foto,
+        edadMin : edadMin,
+        edadMax :edadMax,
         envio : envio
     })
 
@@ -50,20 +63,26 @@ function agregar(e) {
     refMarca.value = ''
     refCategoria.value = ''
     refDetalles.value = ''
+    refDescripcion.value = ''
     refFoto.value = ''
+    refEdadMin.value = ''
+    refEdadMax.value = ''
     refEnvio.checked = false
 }
 
 function representarTablaProductos() {
     
     var filasTabla = '<tr>' +
+                        '<th>foto</th>' +
                         '<th>nombre</th>' +
                         '<th>precio</th>' +
                         '<th>stock</th>' +
                         '<th>marca</th>' +
                         '<th>categoría</th>' +
                         '<th>detalles</th>' +
-                        '<th>foto</th>' +
+                        '<th>descripcion</th>' +
+                        '<th>edad min</th>' +
+                        '<th>edad max</th>' +
                         '<th>envío sin cargo</th>' +
                     '</tr>'
 
@@ -71,13 +90,16 @@ function representarTablaProductos() {
         for(var i=0; i<productos.length; i++) {
             filasTabla += 
                 '<tr>' +
+                    '<td><img width="50" src="' + productos[i].foto + '" alt="foto de '+productos[i].nombre+'"></td>' +
                     '<td>'+ productos[i].nombre  +'</td>' +
                     '<td> $'+ productos[i].precio +'</td>' +
                     '<td> '+ productos[i].stock +'</td>' +
                     '<td> '+ productos[i].marca +'</td>' +
                     '<td> '+ productos[i].categoria +'</td>' +
                     '<td> '+ productos[i].detalles +'</td>' +
-                    '<td><img width="50" src="' + productos[i].foto + '" alt="foto de '+productos[i].nombre+'"></td>' +
+                    '<td> '+ productos[i].descripcion +'</td>' +
+                    '<td> '+ productos[i].edadMin +'</td>' +
+                    '<td> '+ productos[i].edadMax +'</td>' +
                     '<td>'+ (productos[i].envio? 'Si':'No') +'</td>' +
                 '</tr>'
         }

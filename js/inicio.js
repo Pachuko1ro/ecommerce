@@ -16,13 +16,13 @@ function representarCardsProductos() {
                 '<section>' +
                     '<img src="' + productos[i].foto + '" alt="">' +
                     '<h4>'+ productos[i].nombre  +'</h4>' +
-                    '<p><b>Stock:</b> '+ productos[i].stock +'</p>' +
+                    /* '<p><b>Stock:</b> '+ productos[i].stock +'</p>' + */
                     '<p><b>Marca:</b> '+ productos[i].marca +'</p>' +
                     '<p><b>Categoría:</b> '+ productos[i].categoria +'</p>' +
                     '<p><b>Detalles:</b> '+ productos[i].detalles +'</p>' +
                     '<br>' +
                     '<p><b class="precio">Precio: $'+ productos[i].precio +'</b></p>' +
-                    '<p><b style="color:brown;">Envío:</b> '+ (productos[i].envio? 'Si':'No') +'</p>' +
+                    '<p><b style="color:brown;">Envío gratis:</b> '+ (productos[i].envio? 'Si':'No') +'</p>' +
                     '<button>Agregar 🛒</button>'+
                 '</section>'
         }
@@ -31,7 +31,7 @@ function representarCardsProductos() {
 
     document.querySelector('.cards-container').innerHTML = cards
 }
-
+/* 
 function representarCardsProductos2() {
     for(var i=0; i<productos.length; i++) {
         document.querySelector('.cards-container').innerHTML += 
@@ -48,7 +48,7 @@ function representarCardsProductos2() {
             '</section>'
     }
 }
-
+ */
 
 function start() {
     console.warn( document.querySelector('title').innerText )
